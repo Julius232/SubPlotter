@@ -25,7 +25,7 @@ for line in content:
 new_content = [value for value in new_content if value.replace('-', '').isnumeric()]
 
 # Write pairs of values to file
-with open('output.txt', 'w') as f:
+with open('output.csv', 'w') as f:
     for i in range(0, len(new_content), 2):
         # Check if i+1 is a valid index
         if i + 1 < len(new_content):
