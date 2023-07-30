@@ -24,6 +24,15 @@ for line in content:
 # Remove all non-numeric values
 new_content = [value for value in new_content if value.replace('-', '').isnumeric()]
 
+# Write pairs of values to file
+with open('output.txt', 'w') as f:
+    for i in range(0, len(new_content), 2):
+        # Check if i+1 is a valid index
+        if i + 1 < len(new_content):
+            f.write(new_content[i] + ', ' + new_content[i+1] + '\n')
+        else:
+            f.write(new_content[i] + '\n')
+
 # absolute time and pulse states
 data = list(map(int, new_content))
 time = [abs(value) for value in data]
