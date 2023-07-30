@@ -56,5 +56,5 @@ df = pd.DataFrame({
 
 # visualize
 fig = go.Figure(data=go.Scatter(x=df['cumulative_time'], y=df['pulse'], mode='lines', line_shape='hv'))
-fig.update_yaxes(range=[0, 10])  # Set the range of y-axis as 0 to 10
+fig.update_yaxes(range=[-0.3, 10])  # Set the range of y-axis as -0.3 to 10
 fig.show()
