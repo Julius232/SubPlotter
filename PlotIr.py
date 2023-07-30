@@ -27,7 +27,7 @@ new_content = [value for value in new_content if value.replace('-', '').isnumeri
 # absolute time and pulse states
 data = list(map(int, new_content))
 time = data
-pulse = [(i % 2) for i in range(len(data))] # pulse is 0 or 1 alternately
+pulse = [(i + 1) % 2 for i in range(len(data))] # pulse is 1 or 0 alternately
 
 # cumulative time and corresponding pulse states
 cumulative_time = []
